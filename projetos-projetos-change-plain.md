@@ -11,5 +11,5 @@ Tem por objetivo documentar classes e metodos das aplicações, bem como aquivos
 4. Crie se necessário o diretório ${HOME}/work/spaces
 5. Solicite permissão para para ações de leitura e gravação nos diretório de arquivo e do projeto
 6. Analise o XML da task para compreender a necessidade da modificação, este xml encontrask em TASK-NAME.xml
-7. Crie um plano de ação para a modificação no arquivo TASK-NAME-plain.md
+7. Crie para a modificação um plano de ação no padrão markdown no arquivo TASK-NAME-plain.md
 ```
