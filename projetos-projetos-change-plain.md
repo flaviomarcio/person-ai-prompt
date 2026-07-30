@@ -10,6 +10,8 @@ Tem por objetivo documentar classes e metodos das aplicações, bem como aquivos
 3. O diretório onde os arquivos xml e planos de ação deve ser lidos, criados e ou modificados é ${HOME}/work/spaces
 4. Crie se necessário o diretório ${HOME}/work/spaces
 5. Solicite permissão para para ações de leitura e gravação nos diretório de arquivo e do projeto
-6. Analise o XML da task para compreender a necessidade da modificação, este xml encontrask em TASK-NAME.xml
+6. Analise do XML, este xml encontrask em TASK-NAME.xml
+    6.1 Analise o XML da task para compreender a necessidade da modificação
+    6.2 Considere que o XML tem anexos inclusos onde se faz necessário download e analise dos mesmos, especialmente falando de json que podem ser um openapi
 7. Crie para a modificação um plano de ação no padrão markdown no arquivo TASK-NAME-plain.md
 ```
