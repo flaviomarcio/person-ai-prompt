@@ -16,5 +16,8 @@
 - Refatorações
 [Acesse aqui](projetos-project-refatorar.md)
 
+- Cobertura de testes
+[Acesse aqui](projetos-projetos-testes.md)
+
 - Documentação
 [Acesse aqui](projetos-project-documentar.md)
