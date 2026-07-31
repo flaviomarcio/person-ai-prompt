@@ -21,6 +21,7 @@ Para o projeto
     9.1 Controllers e Consumers
         9.1.1 Fazer apenas cobertura de testes
         9.1.2 Não há necessidade de emular o funcionamento do adapter, ex: api ou tópico
+10. Não tentar entender libs externa.
 ```
 
 Para algumas classes
@@ -41,4 +42,5 @@ Para algumas classes
     9.1 Controllers e Consumers
         9.1.1 Fazer apenas cobertura de testes
         9.1.2 Não há necessidade de emular o funcionamento do adapter, ex: api ou tópico
+10. Não tentar entender libs externa.
 ```
