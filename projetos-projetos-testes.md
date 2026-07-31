@@ -18,9 +18,9 @@ Para o projeto
 7. Sempre validar o resultado se houver resultado
 8. Sempre validar o uso de classes como repositories
 9. Testes para adapters
-    9.1 Controllers
-        9.1.1 Fazer apenas cobertura de testes nos controllers 
-        9.1.2 Não há necessidade de levantar uma api funcional bem como fazer requests para testes
+    9.1 Controllers e Consumers
+        9.1.1 Fazer apenas cobertura de testes
+        9.1.2 Não há necessidade de emular o funcionamento do adapter, ex: api ou tópico
 ```
 
 Para algumas classes
@@ -38,7 +38,7 @@ Para algumas classes
 7. Sempre validar o resultado se houver resultado
 8. Sempre validar o uso de classes como repositories
 9. Testes para adapters
-    9.1 Controllers
-        9.1.1 Fazer apenas cobertura de testes nos controllers 
-        9.1.2 Não há necessidade de levantar uma api funcional bem como fazer requests para testes
+    9.1 Controllers e Consumers
+        9.1.1 Fazer apenas cobertura de testes
+        9.1.2 Não há necessidade de emular o funcionamento do adapter, ex: api ou tópico
 ```
