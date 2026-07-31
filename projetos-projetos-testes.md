@@ -26,6 +26,8 @@ Para o projeto
 Para algumas classes
 ```text
 1. Crie os testes para as classes
+    1.1 ClasseNomeA
+    1.2 ClasseNomeB
 2. Considere analisar e usar o padrão de testes existentes
 3. Crie um teste usando Mockito
 4. Não deve utilizar contexto do SpringBootTest
