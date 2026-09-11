@@ -24,7 +24,7 @@ Tem por objetivo analise a tarefa juntamente com o codigo fonte da aplicação e
 			Local: ${HOME}/work/spaces
 		Diretorio workspace da tarefa
 			Salvar tudo relacionado a tarefa, como xml da tarefa, anexos e resultados gerados durante a sessão como planos de ação, relatorios, etc...
-			Local: ${HOME}/work/spaces/TASK-NAME 
+			Local: ${HOME}/work/spaces/tasks/TASK-NAME 
 		Diretorio do Projeto
 			Local: Diretorio corrente (onde comando é executado)
 	
@@ -34,10 +34,15 @@ Tem por objetivo analise a tarefa juntamente com o codigo fonte da aplicação e
 		0.1
 			Crie se necessario o diretorio:
 			- ${HOME}/work/spaces
-			- ${HOME}/work/spaces/TASK-NAME
+			- ${HOME}/work/spaces/tasks
+			- ${HOME}/work/spaces/tasks/TASK-NAME
 		0.2
-			Solicite permissao para ler e gravar arquivos
-			Locais: ${HOME}/work, ${HOME}/work/spaces, ${HOME}/work/spaces/TASK-NAME e diretorio atual	
+			Solicite permissao para ler e gravar arquivos:
+			- ${HOME}/work
+			- ${HOME}/work/spaces
+			- ${HOME}/work/spaces/tasks/
+			- ${HOME}/work/spaces/tasks/TASK-NAME
+			- Diretorio corrente
 		0.3
 			Solicite permissao de leitura para usar o git
 			Locais: diretorio corrente da sessão
@@ -67,7 +72,7 @@ Tem por objetivo analise a tarefa juntamente com o codigo fonte da aplicação e
 	============================
 		1.1
 			Localize todos os arquivos *.* no workspace da tarefa
-			${HOME}/work/spaces/TASK-NAME
+			${HOME}/work/spaces/tasks/TASK-NAME
 		1.2
 			Classifique os arquivos encontrados: 
 			1.2.1 XML Principal
