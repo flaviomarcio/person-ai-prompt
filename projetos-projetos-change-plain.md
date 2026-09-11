@@ -39,7 +39,7 @@ Tem por objetivo analise a tarefa juntamente com o codigo fonte da aplicação e
 			Solicite permissao para ler e gravar arquivos
 			Locais: ${HOME}/work, ${HOME}/work/spaces, ${HOME}/work/spaces/TASK-NAME e diretorio atual	
 		0.3
-			Solicite permissao para usar o git
+			Solicite permissao de leitura para usar o git
 			Locais: diretorio corrente da sessão
 		0.4 
 			Se configurados MCP para acesso boards faça:
@@ -101,6 +101,7 @@ Tem por objetivo analise a tarefa juntamente com o codigo fonte da aplicação e
 	=======================
 		2.1
 			Analise o arquivo TASK-NAME.xml para compreender:
+			- Tipo de tarefa se feat,feature,bugfix,fix, etc
 			- Escopo da tarefa
 			- Requisitos de aceitacao
 			- Criterios de sucesso
