@@ -17,7 +17,7 @@ DEFINICOES INICIAIS
 	Diretorio do Workspace
 		Local: ${HOME}/work/spaces
 	Diretorio workspace da task
-		Deve-se salvar tudo relacionado a task, como xml da task, anexos e resultados gerados durante a sessão como planos de ação, relatorios, etc...
+		Salvar tudo relacionado a task, como xml da task, anexos e resultados gerados durante a sessão como planos de ação, relatorios, etc...
 		Local: ${HOME}/work/spaces/TASK-NAME 
 	Diretorio do Projeto
 		Local: Diretorio corrente (onde comando é executado)
@@ -33,10 +33,11 @@ FASE 0: VALIDACAO E AUTORIZACAO (INICIO)
 		Solicite permissao para ler e gravar arquivos
 		Locais: ${HOME}/work, ${HOME}/work/spaces, ${HOME}/work/spaces/TASK-NAME e diretorio atual	
 	0.3 
-		Se com acesso a boards onde a TASK-NAME existe:
-		- Faça download do xml da task para TASK-NAME.xml
-		- Faça download dos anexos e manter nome original
-		- Faça download e leitura de tudo que é importa para a task
+		Se configurados MCP para acesso boards faça:
+		- Existe task TASK-NAME?
+		- Download do xml da task para TASK-NAME.xml
+		- Download dos anexos e manter nome original
+		- Download e leitura de tudo que é importa para a task
 		- Tudo deve ser salvo no workspace da task
  	0.4
 		VALIDACAO CRITICA: arquivo TASK-NAME.xml deve existir
