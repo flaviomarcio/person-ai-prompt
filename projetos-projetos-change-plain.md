@@ -2,8 +2,15 @@
 
 ## Plano de ação baseado em XML de uma task
 
-Tem por objetivo documentar classes e metodos das aplicações, bem como aquivos de configuração gerando assim um *README.md* para o projeto trabalhado
+Tem por objetivo analise a tarefa juntamente com o codigo fonte da aplicação e gerando assim relatorios no formato markdown como:
+- Aprendizado da A.I.
+- Analise da tarefa
+- Plano ação
+- Relatório final
 
+### Prompts
+
+1. Analise da task vs repositorio do projeto
 ```text
 DEFINICOES INICIAIS
 ===================
@@ -32,21 +39,24 @@ FASE 0: VALIDACAO E AUTORIZACAO (INICIO)
 	0.2
 		Solicite permissao para ler e gravar arquivos
 		Locais: ${HOME}/work, ${HOME}/work/spaces, ${HOME}/work/spaces/TASK-NAME e diretorio atual	
-	0.3 
+	0.3
+		Solicite permissao para usar o git
+		Locais: diretorio corrente da sessão
+	0.4 
 		Se configurados MCP para acesso boards faça:
 		- Existe task TASK-NAME?
 		- Download do xml da task para TASK-NAME.xml
 		- Download dos anexos e manter nome original
 		- Download e leitura de tudo que é importa para a task
 		- Tudo deve ser salvo no workspace da task
- 	0.4
+ 	0.5
 		VALIDACAO CRITICA: arquivo TASK-NAME.xml deve existir
 		Senao interrompa a execucao com erro
- 	0.5
+ 	0.6
 		Valide se TASK-NAME.xml é formato Jira
 		Deve ser Jira obrigatoriamente
 		Se nao for Jira, interrompa a execucao
-	0.6
+	0.7
 		Checklist pre-requisitos:
 		- TASK-NAME.xml da task existe?
 		- Formato Jira valido?
@@ -200,7 +210,6 @@ FASE 6: CONFIRMACAO FINAL
 		- TASK-NAME-analise-tarefa.md (gerado?)
 		- TASK-NAME-plano-acao.md (gerado?)
 		- TASK-NAME-relatorio-final.md (gerado?)
-		- README.md (criado ou atualizado?)
 	6.2
 		Liste proximos passos para implementacao
 	6.3
