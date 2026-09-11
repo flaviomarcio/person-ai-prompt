@@ -3,6 +3,7 @@
 ## Prompts
 - [Criando projetos](projetos-projetos-criar.md)
 - [Analisando tarefa](projetos-projetos-task-analyzer.md)
+- [Code review](projetos-projetos-code-review.md)
 - [Trabalhando com Banco de dados](projetos-project-database.md)
 - [Refatorações](projetos-project-refatorar.md)
 - [Cobertura de testes](projetos-projetos-testes.md)
