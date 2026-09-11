@@ -18,7 +18,6 @@ Tem por objetivo analise a tarefa juntamente com o codigo fonte da aplicação e
 			Limitaçõs: ex: TDA, TDAH, dislexia, etc.
 		TASK-NAME
 			Representacao de uma tarefa real
-			Ferramenta: JIRA
 			Identificador: TTT-1234 
 		Diretorio do Workspace
 			Local: ${HOME}/work/spaces
@@ -32,21 +31,22 @@ Tem por objetivo analise a tarefa juntamente com o codigo fonte da aplicação e
 	=================
 	FASE 0: VALIDACAO E AUTORIZACAO (INICIO)
 		0.1
+			Solicite ao usuário o valor para TTT-1234
+			Se não informado: INTERROMPA
+		0.2
 			Crie se necessario o diretorio:
 			- ${HOME}/work/spaces
 			- ${HOME}/work/spaces/tasks
 			- ${HOME}/work/spaces/tasks/TASK-NAME
-		0.2
+		0.3
 			Solicite permissao para ler e gravar arquivos:
-			- ${HOME}/work
-			- ${HOME}/work/spaces
 			- ${HOME}/work/spaces/tasks/
 			- ${HOME}/work/spaces/tasks/TASK-NAME
 			- Diretorio corrente
-		0.3
+		0.4
 			Solicite permissao de leitura para usar o git
 			Locais: diretorio corrente da sessão
-		0.4 
+		0.5 
 			Se configurados MCP para acesso boards faça:
 			- Existe tarefa TASK-NAME?
 			- Download do xml da tarefa para TASK-NAME.xml
@@ -54,14 +54,14 @@ Tem por objetivo analise a tarefa juntamente com o codigo fonte da aplicação e
 			- Download e leitura de tudo que é importa para a tarefa
 			- Tudo deve ser salvo no workspace da tarefa
 			Se tarefa não existir no MCP: INTERROMPA 
-		0.5
+		0.6
 			VALIDACAO CRITICA: arquivo TASK-NAME.xml deve existir
 			Senao interrompa a execucao com erro
-		0.6
+		0.7
 			Valide se TASK-NAME.xml podem estar em formatos diferentes, identificar Ferramenta, ex: Jira.
 			- Deve ser legivel como tarefa?
 			Se qualquer falhar: INTERROMPA 
-		0.7
+		0.8
 			Checklist pre-requisitos:
 			- TASK-NAME.xml da tarefa existe?
 			- Formato TASK-NAME.xml legivel e valido?
