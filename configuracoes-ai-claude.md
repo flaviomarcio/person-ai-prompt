@@ -10,16 +10,21 @@
 ## MCP Jira no Claude
    - Adicione o MCP e faça o **login**
       1. Registrar o Jira no Claude Code (roda no seu terminal, fora desta sessão):
-         ```bash
-         $ claude mcp add --transport sse --scope user atlassian https://mcp.atlassian.com/v1/mcp
-        
-         #output   
-         Added SSE MCP server atlassian with URL: https://mcp.atlassian.com/v1/mcp to user config
-         File modified: ${HOME}/.claude.json
-
-         #Após 2026-06-30 use:
-         $ claude mcp add --transport http --scope user atlassian https://mcp.atlassian.com/v1/mcp
-         ```
+         - Atual
+            ```bash
+            $ claude mcp add --transport sse --scope user atlassian https://mcp.atlassian.com/v1/mcp
+         
+            #output   
+            Added SSE MCP server atlassian with URL: https://mcp.atlassian.com/v1/mcp to user config
+            File modified: ${HOME}/.claude.json
+            ```
+         - Deprecated Após **2026-06-30**
+            ```bash
+            $ claude mcp add --transport http --scope user atlassian https://mcp.atlassian.com/v1/mcp
+            #output
+            Added HTTP MCP server atlassian with URL: https://mcp.atlassian.com/v1/mcp to user config
+            File modified: ${HOME}/.claude.json
+            ```
       2. Autenticar:
          - Reabra o Claude Code
          - Digite **/mcp → selecione atlassian → Authenticate**
