@@ -9,7 +9,7 @@ Tem por objetivo analise a tarefa juntamente com o codigo fonte da aplicação e
 - Relatório final
 
 ### Prompts
-1. Analise da task vs repositorio do projeto
+1. Analise da tarefa vs repositorio do projeto
 	```text
 	DEFINICOES INICIAIS
 	===================
@@ -22,8 +22,8 @@ Tem por objetivo analise a tarefa juntamente com o codigo fonte da aplicação e
 			Identificador: TTT-1234 
 		Diretorio do Workspace
 			Local: ${HOME}/work/spaces
-		Diretorio workspace da task
-			Salvar tudo relacionado a task, como xml da task, anexos e resultados gerados durante a sessão como planos de ação, relatorios, etc...
+		Diretorio workspace da tarefa
+			Salvar tudo relacionado a tarefa, como xml da tarefa, anexos e resultados gerados durante a sessão como planos de ação, relatorios, etc...
 			Local: ${HOME}/work/spaces/TASK-NAME 
 		Diretorio do Projeto
 			Local: Diretorio corrente (onde comando é executado)
@@ -43,11 +43,12 @@ Tem por objetivo analise a tarefa juntamente com o codigo fonte da aplicação e
 			Locais: diretorio corrente da sessão
 		0.4 
 			Se configurados MCP para acesso boards faça:
-			- Existe task TASK-NAME?
-			- Download do xml da task para TASK-NAME.xml
+			- Existe tarefa TASK-NAME?
+			- Download do xml da tarefa para TASK-NAME.xml
 			- Download dos anexos e manter nome original
-			- Download e leitura de tudo que é importa para a task
-			- Tudo deve ser salvo no workspace da task
+			- Download e leitura de tudo que é importa para a tarefa
+			- Tudo deve ser salvo no workspace da tarefa
+			Se tarefa não existir no MCP: INTERROMPA 
 		0.5
 			VALIDACAO CRITICA: arquivo TASK-NAME.xml deve existir
 			Senao interrompa a execucao com erro
@@ -57,7 +58,7 @@ Tem por objetivo analise a tarefa juntamente com o codigo fonte da aplicação e
 			Se qualquer falhar: INTERROMPA 
 		0.7
 			Checklist pre-requisitos:
-			- TASK-NAME.xml da task existe?
+			- TASK-NAME.xml da tarefa existe?
 			- Formato TASK-NAME.xml legivel e valido?
 			- Permissao de leitura em workspace e workspace da tarefa?
 			- Permissao de escrita em workspace e workspace da tarefa?
@@ -65,7 +66,7 @@ Tem por objetivo analise a tarefa juntamente com o codigo fonte da aplicação e
 	FASE 1: COLETA DE ARTEFATOS
 	============================
 		1.1
-			Localize todos os arquivos *.* no workspace da task
+			Localize todos os arquivos *.* no workspace da tarefa
 			${HOME}/work/spaces/TASK-NAME
 		1.2
 			Classifique os arquivos encontrados: 
@@ -89,7 +90,7 @@ Tem por objetivo analise a tarefa juntamente com o codigo fonte da aplicação e
 			1.2.5 Arquivos Markdown
 				Pattern: TASK-NAME*.md
 				Aviso: Podem ter sido gerados por IA
-				Acao: NÃO considerar como evidencia da task
+				Acao: NÃO considerar como evidencia da tarefa
 		1.3
 			Para cada anexo:
 			Identifique "palavras-chave" mencionadas nos arquivos e ignorando videos longs para analise.
