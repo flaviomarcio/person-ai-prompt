@@ -9,7 +9,6 @@ Tem por objetivo analise a tarefa juntamente com o codigo fonte da aplicação e
 - Relatório final
 
 ### Prompts
-
 1. Analise da task vs repositorio do projeto
 	```text
 	DEFINICOES INICIAIS
