@@ -26,6 +26,9 @@ Tem por objetivo analise a tarefa juntamente com o codigo fonte da aplicação e
 			Local: ${HOME}/work/spaces/tasks/TASK-NAME 
 		Diretorio do Projeto
 			Local: Diretorio corrente (onde comando é executado)
+		Conformidade de auto referenciando:
+			- Não se auto referenciando nas documentações
+			- Em vez de "Gerado por IA a partir de TASK-NAME.xml" usar "Gerado a partir de TASK-NAME.xml"
 	
 	FLUXO DE EXECUCAO
 	=================

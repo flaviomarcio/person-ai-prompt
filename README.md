@@ -21,3 +21,7 @@
 
 - Documentação
 [Acesse aqui](projetos-project-documentar.md)
+
+
+- Configurações relacionadas a A.I.
+[Acesse aqui](configuracoes.md)

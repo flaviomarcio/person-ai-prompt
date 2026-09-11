@@ -1,0 +1,1 @@
+# Configurações para A.I. Gemini

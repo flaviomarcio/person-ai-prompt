@@ -1,20 +1,24 @@
-### A.I. Claude 
-- Backup & Restore
+# Configurações para A.I. Claude
+
+## Backup & Restore
    1. Script de backup
       ```bash
       ```
    2. Script de restore
       ```bash
       ```
-- MCP Jira no Claude
+## MCP Jira no Claude
    - Adicione o MCP e faça o **login**
       1. Registrar o Jira no Claude Code (roda no seu terminal, fora desta sessão):
          ```bash
-         $ claude mcp add --transport sse --scope user atlassian https://mcp.atlassian.com/v1/sse
-         
+         $ claude mcp add --transport sse --scope user atlassian https://mcp.atlassian.com/v1/mcp
+        
          #output   
-         Added SSE MCP server atlassian with URL: https://mcp.atlassian.com/v1/sse to user config
+         Added SSE MCP server atlassian with URL: https://mcp.atlassian.com/v1/mcp to user config
          File modified: ${HOME}/.claude.json
+
+         #Após 2026-06-30 use:
+         $ claude mcp add --transport http --scope user atlassian https://mcp.atlassian.com/v1/mcp
          ```
       2. Autenticar:
          - Reabra o Claude Code
@@ -50,3 +54,4 @@
          4. Teste download de anexos
          ```
          > Nota: Possível bloqueio: se a empresa restringir apps de terceiros no Atlassian, o login vai falhar com "não autorizado" e aí o admin do Jira precisa liberar o app "Atlassian Rovo MCP Server".
+
