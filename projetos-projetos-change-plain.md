@@ -7,62 +7,62 @@ Tem por objetivo documentar classes e metodos das aplicações, bem como aquivos
 ```text
 DEFINICOES INICIAIS
 ===================
- 
+	Parametros do usuário
+		Se o usuário tem limitações registradas na memoria adeque as respostas a cada limitção.
+		Limitaçõs: ex: TDA, TDAH, dislexia, etc.
 	TASK-NAME
 		Representacao de uma tarefa real
-		Identificador: TTT-1234
- 
+		Ferramenta: JIRA
+		Identificador: TTT-1234 
 	Diretorio do Workspace
 		Local: ${HOME}/work/spaces
- 
+	Diretorio workspace da task
+		Deve-se salvar tudo relacionado a task, como xml da task, anexos e resultados gerados durante a sessão como planos de ação, relatorios, etc...
+		Local: ${HOME}/work/spaces/TASK-NAME 
 	Diretorio do Projeto
 		Local: Diretorio corrente (onde comando é executado)
  
- 
 FLUXO DE EXECUCAO
 =================
- 
 FASE 0: VALIDACAO E AUTORIZACAO (INICIO)
-	0.1
-		Solicite permissao para ler e gravar arquivos
-		Locais: ${HOME}/work/spaces e diretorio atual
- 
+ 	0.1
+		Crie se necessario o diretorio:
+		- ${HOME}/work/spaces
+		- ${HOME}/work/spaces/TASK-NAME
 	0.2
-		Crie se necessario o diretorio ${HOME}/work/spaces
- 
-	0.3
+		Solicite permissao para ler e gravar arquivos
+		Locais: ${HOME}/work, ${HOME}/work/spaces, ${HOME}/work/spaces/TASK-NAME e diretorio atual	
+	0.3 
+		Se com acesso a boards onde a TASK-NAME existe:
+		- Faça download do xml da task para TASK-NAME.xml
+		- Faça download dos anexos e manter nome original
+		- Faça download e leitura de tudo que é importa para a task
+		- Tudo deve ser salvo no workspace da task
+ 	0.4
 		VALIDACAO CRITICA: arquivo TASK-NAME.xml deve existir
 		Senao interrompa a execucao com erro
- 
-	0.4
+ 	0.5
 		Valide se TASK-NAME.xml é formato Jira
 		Deve ser Jira obrigatoriamente
 		Se nao for Jira, interrompa a execucao
- 
-	0.5
+	0.6
 		Checklist pre-requisitos:
-		- TASK-NAME.xml existe?
+		- TASK-NAME.xml da task existe?
 		- Formato Jira valido?
 		- Permissao de leitura em workspace?
 		- Permissao de escrita em workspace?
-		Se qualquer falhar: INTERROMPA
- 
- 
+		Se qualquer falhar: INTERROMPA 
 FASE 1: COLETA DE ARTEFATOS
 ============================
- 
 	1.1
-		Localize todos os arquivos TASK-NAME*.* no workspace
-		${HOME}/work/spaces
- 
+		Localize todos os arquivos *.* no workspace da task
+		${HOME}/work/spaces/TASK-NAME
 	1.2
-		Classifique os arquivos encontrados:
- 
+		Classifique os arquivos encontrados: 
 		1.2.1 XML Principal
 			Arquivo: TASK-NAME.xml
 			Status: Obrigatorio, ja validado em 0.4
-			Acao: Extrair dados da task
- 
+			Acao: Extrair dados da task 
 		1.2.2 Arquivos JSON
 			Pattern: TASK-NAME*.json
 			Importancia: Alta
@@ -78,7 +78,6 @@ FASE 1: COLETA DE ARTEFATOS
 			Pattern: TASK-NAME*.md
 			Aviso: Podem ter sido gerados por IA
 			Acao: NÃO considerar como evidencia da task
- 
 	1.3
 		Para cada anexo (JSON, imagem):
 		Identifique "palavras-chave" mencionadas
@@ -86,39 +85,32 @@ FASE 1: COLETA DE ARTEFATOS
 		Busque no repositorio por essas palavras-chave
 		Exemplo: grep -r "PalavraDoLog" ./src
 		Marque como "evidencia validada" ou "sem correspondencia"
- 
- 
 FASE 2: ANALISE CRITICA
 =======================
- 
 	2.1
 		Analise o arquivo TASK-NAME.xml para compreender:
 		- Escopo da tarefa
 		- Requisitos de aceitacao
 		- Criterios de sucesso
-		- Dependencias mencionadas
- 
+		- Dependencias mencionadas 
 	2.2
 		Para cada anexo de log ou print:
 		Extraia informacoes relevantes
 		Identifique classes ou metodos mencionados
 		Identifique arquivos de configuracao mencionados
-		Valide se essas referencias existem no repositorio
- 
+		Valide se essas referencias existem no repositorio 
 	2.3
 		Processe arquivos JSON:
 		Valide sintaxe (JSON bem formado?)
 		Se JSON invalido: log do erro, continue analise
 		Se valido: extraia estrutura e significado
-		Busque correspondencia com APIs ou logs do sistema
- 
+		Busque correspondencia com APIs ou logs do sistema 
 	2.4
 		Processe imagens via OCR:
 		Extraia texto visivel da imagem
 		Se OCR falhar: solicite interpretacao manual
 		Marque manualmente o que nao foi reconhecido
-		Busque palavras-chave no repositorio
- 
+		Busque palavras-chave no repositorio 
 	2.5
 		Documente todo aprendizado em:
 		Arquivo: TASK-NAME-aprendizado-ai.md
@@ -128,16 +120,15 @@ FASE 2: ANALISE CRITICA
 		- Configuracoes relevantes
 		- Validacoes cruzadas com repositorio
 		- Gaps ou inconsistencias encontradas
- 
- 
 FASE 3: CRIACAO DO PLANO DE ACAO
-=================================
- 
+================================= 
 	3.1
-		Crie plano de acao executavel
-		Arquivo: TASK-NAME-plan.md
- 
+		Crie analise da tarefa com evidencias claras da clausa do problema
+		Arquivo: TASK-NAME-analise-tarefa.md
 	3.2
+		Crie plano de acao executavel
+		Arquivo: TASK-NAME-plano-acao.md 
+	3.3
 		Conteudo do plano deve incluir:
 		- Escopo completo da tarefa
 		- Classes que precisam ser modificadas
@@ -145,39 +136,29 @@ FASE 3: CRIACAO DO PLANO DE ACAO
 		- Arquivos de configuracao afetados
 		- Passos executaveis em sequencia
 		- Validacoes e testes a realizar
-		- Ordem recomendada de implementacao
- 
-	3.3
-		Estruture o plano em secoes:
-		
-		3.3.1 Resumo Executivo baseado no arquivo TASK-NAME.xml
+		- Ordem recomendada de implementacao 
+	3.4
+		Estruture o plano em secoes:		
+		3.4.1 Resumo Executivo baseado no arquivo TASK-NAME.xml
 			O que vai fazer
 			Por que vai fazer
-			Impacto esperado
- 
-		3.3.2 Analise de Impacto
+			Impacto esperado 
+		3.4.2 Analise de Impacto
 			Deixar claro por a analise levou a sugestão
-            Deixar claro o impacto na aplicação
- 
-		3.3.3 Passos de Implementacao
-			Extrair objetivo da implementação do arquivo TASK-NAME.xml.
- 
-		3.3.4 Validacoes
-			Existindo validações então extrai-las do arquivo TASK-NAME.xml 
- 
-		3.3.5 Rollback (se necessario)
+            Deixar claro o impacto na aplicação.
+		3.4.3 Passos de Implementacao
+			Extrair objetivo da implementação do arquivo TASK-NAME.xml. 
+		3.4.4 Validacoes
+			Existindo validações então extrai-las do arquivo TASK-NAME.xml  
+		3.4.5 Rollback (se necessario)
 			Como reverter se der problema
-            Sempre confirmar o rollback
- 
- 
-FASE 4: GERACAO DE DOCUMENTACAO
-================================
- 
+            Sempre confirmar o rollback 
+FASE 4: RELATORIO FINAL 
+================================ 
 	4.1
-		Crie ou atualize README.md no repositorio
- 
+		Crie ou atualize TASK-NAME-relatorio-final.md
 	4.2
-		Conteudo do README deve incluir:
+		Conteudo do RELATORIO deve incluir:
 		- Titulo do projeto / modificacao
 		- Overview das mudancas
 		- Classes documentadas com proposito
@@ -185,59 +166,46 @@ FASE 4: GERACAO DE DOCUMENTACAO
 		- Arquivos de configuracao relevantes
 		- Como compilar e testar
 		- Exemplos de uso
-		- Notas importantes
- 
- 
+		- Notas importantes 
 FASE 5: TRATAMENTO DE ERROS
-============================
- 
+============================ 
 	5.1 JSON Invalido
 		Acao: Log do erro, continue analise
-		Flag: Marque como "JSON invalido - verificar manualmente"
- 
+		Flag: Marque como "JSON invalido - verificar manualmente" 
 	5.2 OCR Falhou
 		Acao: Solicite interpretacao manual do print
-		Flag: Marque como "OCR falhou - verificar print"
- 
+		Flag: Marque como "OCR falhou - verificar print" 
 	5.3 Referencia Nao Encontrada
 		Acao: Continuar analise
-		Flag: Documentar que classe/metodo nao foi localizado
- 
+		Flag: Documentar que classe/metodo nao foi localizado 
 	5.4 TASK-NAME.xml Estrutura Inesperada
 		Acao: PARAR execucao
 		Erro: Reportar qual campo nao foi encontrado
 		Requer: Investigacao manual
-
 	5.5 TASK-NAME.xml Sem objetivo claro ou evidencias
 		Acao: PARAR execucao
 		Erro: Reportar qual campo nao foi encontrado
-		Requer: Investigacao manual
- 
+		Requer: Investigacao manual 
 	5.6 Arquivo Corrompido
 		Acao: PARAR execucao
 		Erro: Informar qual arquivo esta corrompido
 		Recomendacao: Recuperar versao valida
  
- 
 FASE 6: CONFIRMACAO FINAL
 ==========================
- 
 	6.1
 		Resuma arquivos criados:
 		- TASK-NAME-aprendizado-ai.md (gerado?)
-		- TASK-NAME-plan.md (gerado?)
+		- TASK-NAME-analise-tarefa.md (gerado?)
+		- TASK-NAME-plano-acao.md (gerado?)
+		- TASK-NAME-relatorio-final.md (gerado?)
 		- README.md (criado ou atualizado?)
- 
 	6.2
 		Liste proximos passos para implementacao
- 
 	6.3
-		Indique se houve alguma interrupcao ou erro
- 
- 
+		Indique se houve alguma interrupcao ou erro 
 RESUMO DO FLUXO
 ===============
- 
 	Fase 0: Validacoes e Permissoes
 	Fase 1: Coleta de Artefatos
 	Fase 2: Analise Critica
