@@ -39,7 +39,7 @@
       2. Registrando as credenciais do jira na sessão
          - Adicione em ${HOME}/.bashrc
             ```bash
-            export JIRA_EMAIL="flavio.portela@ciss.com.br"
+            export JIRA_EMAIL="seu-mail@seu-dominio.com.br"
             export JIRA_TOKEN="COLE-AQUI-O-TOKEN-COPIADO"
             ```
          - Recarregue a sessão
