@@ -2,7 +2,7 @@
 
 ## Prompts
 - [Criando projetos](projetos-projetos-criar.md)
-- [Analisan tarefa](projetos-projetos-task-analyzer.md)
+- [Analisando tarefa](projetos-projetos-task-analyzer.md)
 - [Trabalhando com Banco de dados](projetos-project-database.md)
 - [Refatorações](projetos-project-refatorar.md)
 - [Cobertura de testes](projetos-projetos-testes.md)
