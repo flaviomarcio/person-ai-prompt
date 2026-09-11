@@ -1,27 +1,10 @@
-# Prompt para atividades diarias
+# Prompts para atividades diárias
 
-## Projetos
-
-## Novo projeto
-
-### Java, Python
-
-- Criando projetos
-[Acesse aqui para criar](projetos-projetos-criar.md)
-[Acesse aqui para modificar](projetos-projetos-change-plain)
-
-- Trabalhando com Banco de dados
-[Acesse aqui](projetos-project-database.md)
-
-- Refatorações
-[Acesse aqui](projetos-project-refatorar.md)
-
-- Cobertura de testes
-[Acesse aqui](projetos-projetos-testes.md)
-
-- Documentação
-[Acesse aqui](projetos-project-documentar.md)
-
-
-- Configurações relacionadas a A.I.
-[Acesse aqui](configuracoes.md)
+## Prompts
+- [Criando projetos](projetos-projetos-criar.md)
+- [Analisan tarefa](projetos-projetos-task-analyzer.md)
+- [Trabalhando com Banco de dados](projetos-project-database.md)
+- [Refatorações](projetos-project-refatorar.md)
+- [Cobertura de testes](projetos-projetos-testes.md)
+- [Documentação](projetos-project-documentar.md)
+- [Configurações relacionadas a A.I.](configuracoes.md)
