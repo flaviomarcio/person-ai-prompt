@@ -52,15 +52,15 @@ Tem por objetivo analise a tarefa juntamente com o codigo fonte da aplicação e
 			VALIDACAO CRITICA: arquivo TASK-NAME.xml deve existir
 			Senao interrompa a execucao com erro
 		0.6
-			Valide se TASK-NAME.xml é formato Jira
-			Deve ser Jira obrigatoriamente
-			Se nao for Jira, interrompa a execucao
+			Valide se TASK-NAME.xml podem estar em formatos diferentes, identificar Ferramenta, ex: Jira.
+			- Deve ser legivel como tarefa?
+			Se qualquer falhar: INTERROMPA 
 		0.7
 			Checklist pre-requisitos:
 			- TASK-NAME.xml da task existe?
-			- Formato Jira valido?
-			- Permissao de leitura em workspace?
-			- Permissao de escrita em workspace?
+			- Formato TASK-NAME.xml legivel e valido?
+			- Permissao de leitura em workspace e workspace da tarefa?
+			- Permissao de escrita em workspace e workspace da tarefa?
 			Se qualquer falhar: INTERROMPA 
 	FASE 1: COLETA DE ARTEFATOS
 	============================
@@ -74,23 +74,25 @@ Tem por objetivo analise a tarefa juntamente com o codigo fonte da aplicação e
 				Status: Obrigatorio, ja validado em 0.4
 				Acao: Extrair dados da task 
 			1.2.2 Arquivos JSON
-				Pattern: TASK-NAME*.json
+				Pattern: *.json
 				Importancia: Alta
 				Conteudo: Logs, documentacao OpenAPI
-				Acao: Validar sintaxe, extrair estrutura
-	
+				Acao: Validar sintaxe, extrair estrutura	
 			1.2.3 Arquivos de Imagem
-				Pattern: TASK-NAME*.png, TASK-NAME*.jpg, etc
+				Pattern: *.png, *.jpg, *.jpge, *.bmp
 				Conteudo: Screenshots, prints de tela
+				Acao: Aplicar OCR, extrair texto visivel	
+			1.2.4 Arquivos de Videos
+				Pattern: *.git, *.mp4, *.avi, *.mov, *.webM, *.HEIF
+				Conteudo: Videos curtos
 				Acao: Aplicar OCR, extrair texto visivel
-	
-			1.2.4 Arquivos Markdown
+			1.2.5 Arquivos Markdown
 				Pattern: TASK-NAME*.md
 				Aviso: Podem ter sido gerados por IA
 				Acao: NÃO considerar como evidencia da task
 		1.3
-			Para cada anexo (JSON, imagem):
-			Identifique "palavras-chave" mencionadas
+			Para cada anexo:
+			Identifique "palavras-chave" mencionadas nos arquivos e ignorando videos longs para analise.
 			Valide cruzando com codigo-fonte do repositorio
 			Busque no repositorio por essas palavras-chave
 			Exemplo: grep -r "PalavraDoLog" ./src
@@ -116,7 +118,7 @@ Tem por objetivo analise a tarefa juntamente com o codigo fonte da aplicação e
 			Se valido: extraia estrutura e significado
 			Busque correspondencia com APIs ou logs do sistema 
 		2.4
-			Processe imagens via OCR:
+			Processe imagens e videos via OCR:
 			Extraia texto visivel da imagem
 			Se OCR falhar: solicite interpretacao manual
 			Marque manualmente o que nao foi reconhecido
@@ -130,6 +132,7 @@ Tem por objetivo analise a tarefa juntamente com o codigo fonte da aplicação e
 			- Configuracoes relevantes
 			- Validacoes cruzadas com repositorio
 			- Gaps ou inconsistencias encontradas
+			- Onde a evidencia foi encontrada
 	FASE 3: CRIACAO DO PLANO DE ACAO
 	================================= 
 		3.1
