@@ -174,19 +174,20 @@ FASE 3: CRIACAO DO PLANO DE ACAO
 		3.4.5 Rollback (se necessario)
 			Como reverter se der problema
 			Sempre confirmar o rollback 
-FASE 4: RELATORIO FINAL 
+FASE 4: RELATORIO DE CAUSA 
 ================================ 
 	4.1
-		Crie ou atualize TASK-NAME-relatorio-final.md
-	4.2
+		Crie ou atualize TASK-NAME-causa.md
+	4.2 Validação do tipo da tarefa:
+		- Se a task é bugfix, fix, hotfix, ou analise
+		Aviso: Task não terá relatorio de causa
+		Se o tipo da tarefá não atender o requisito: Ignore está fase
+	4.3
 		Conteudo do RELATORIO deve incluir:
 		- Titulo do projeto / modificacao
-		- Overview das mudancas
-		- Classes documentadas com proposito
-		- Metodos principais e assinatura
-		- Arquivos de configuracao relevantes
-		- Como compilar e testar
-		- Exemplos de uso
+		- Relato principal do problema
+		- Documentar codigo com problema
+		- Como simular o problema
 		- Notas importantes 
 FASE 5: TRATAMENTO DE ERROS
 ============================ 
