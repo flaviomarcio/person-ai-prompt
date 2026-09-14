@@ -179,8 +179,7 @@ FASE 4: RELATORIO DE CAUSA
 	4.1
 		Crie ou atualize TASK-NAME-causa.md
 	4.2 Validação do tipo da tarefa:
-		- Se a task é bugfix, fix, hotfix, ou analise
-		Aviso: Task não terá relatorio de causa
+		- Se a task é bugfix, fix, hotfix, ou analise (tipo compativel?)
 		Se o tipo da tarefá não atender o requisito: Ignore está fase
 	4.3
 		Conteudo do RELATORIO deve incluir:
