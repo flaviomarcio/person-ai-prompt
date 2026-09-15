@@ -63,6 +63,7 @@ Estrutura Universal para Montar Prompts de Alta Qualidade
     `````
 
 ## Baseado em um projeto
+Este fará a leitura de um projeto seja este qual for, identificará linguamge, frameworks, caracteristicas necessárias para recriar o projeto com os mesmos padrões.
 - Java
     ```text
     DEFINICOES INICIAIS
