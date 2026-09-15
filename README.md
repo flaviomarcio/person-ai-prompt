@@ -1,6 +1,7 @@
 # Prompts para atividades diárias
 
 ## Prompts
+- [Criando prompts](projetos-prompt-criar.md)
 - [Criando projetos](projetos-projetos-criar.md)
 - [Analisando tarefa](projetos-projetos-task-analyzer.md)
 - [Code review](projetos-projetos-code-review.md)
