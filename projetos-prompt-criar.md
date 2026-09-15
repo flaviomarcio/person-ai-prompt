@@ -63,7 +63,7 @@ Estrutura Universal para Montar Prompts de Alta Qualidade
     `````
 
 ## Baseado em um projeto
-Este fará a leitura de um projeto seja este qual for, identificará linguamge, frameworks, caracteristicas necessárias para recriar o projeto com os mesmos padrões.
+Este fará a leitura de um projeto seja este qual for, identificará linguagem, frameworks, caracteristicas necessárias para recriar o projeto com os mesmos padrões.
 - Java
     ```text
     DEFINICOES INICIAIS
@@ -75,6 +75,7 @@ Este fará a leitura de um projeto seja este qual for, identificará linguamge, 
             Análise de projeto existente
             Geração de estrutura simplificada
             Criação de novo projeto com padrão semelhante
+            Identificará caracteristicas necessárias para recriar o projeto com os mesmos padrões.
 
     FLUXO DE EXECUCAO
     =================
@@ -104,6 +105,9 @@ Este fará a leitura de um projeto seja este qual for, identificará linguamge, 
             DTO de request associados às classes @Service resultantes
             DTO de response associados às classes @Service resultantes
             Manter padrão de entrada e saída
+        2.6
+            Identificará linguagem, frameworks, bibliotecas e caracteristicas e manter as mesmas declarações utilizadas no projeto final.
+            Frameworks e bibliotecas devem ter suas versões atualizadas e compatibilizados entre si.
 
     FASE 3: ESTRUTURACAO DO NOVO PROJETO
         3.1 Criar estrutura de diretórios similares ao projeto atual
