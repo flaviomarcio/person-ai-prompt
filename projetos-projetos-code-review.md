@@ -86,11 +86,9 @@ FASE 4: TRATAMENTO DE ERROS
 
 FASE 5: CONFIRMACAO FINAL
 ==========================
-	5.1
-		Resuma arquivos criados:
+	5.1 Resuma arquivos criados:
 		- TASK-NAME-code-review.md (gerado?)
-	5.2
-		Indique se houve alguma interrupcao ou erro 
+	5.2 Indique se houve alguma interrupcao ou erro 
 RESUMO DO FLUXO
 ===============
 	Fase 0: Validacoes e Permissoes
