@@ -14,5 +14,5 @@
     - [Cobertura de testes](prompt-projetos-testes.md)
     - [Documentação](prompt-projetos-documentar.md)
 
-## Configurando
-- [Configurações relacionadas a A.I.](configuracoes.md)
+## Configurando Memory, MCP, etc...
+  - [Documentação](configuracoes.md)
