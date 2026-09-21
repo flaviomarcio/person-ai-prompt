@@ -4,7 +4,7 @@
 
 Tem por objetivo documentar classes e metodos das aplicações, bem como aquivos de configuração gerando assim um *README.md* para o projeto trabalhado
 
->Nota: antes de executar a documentação execute a geração do ddl com o [Prompt](projetos-project-database.md).
+>Nota: antes de executar a documentação execute a geração do ddl com o [Prompt](projetos-database.md).
 
 ```text
 DEFINICOES INICIAIS

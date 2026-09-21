@@ -3,7 +3,6 @@
 ## Claude
 [Acesse aqui](configuracoes-ai-claude.md)
 
-
 ## ChatGPT
 [Acesse aqui](configuracoes-ai-chatgpt.md)
 
