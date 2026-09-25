@@ -2,6 +2,9 @@
 
 ## Prompts
 
+- Agentes
+    - [Definições para projeto java](prompt-projetos-agent-definicoes-java.md)
+
 - Criando
     - [Documentação](prompt-criar.md)
 
