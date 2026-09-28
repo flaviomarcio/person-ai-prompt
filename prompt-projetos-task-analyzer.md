@@ -54,6 +54,8 @@ FASE 0: VALIDACAO E AUTORIZACAO (INICIO)
 		- Download dos anexos e manter nome original
 		- Download e leitura de tudo que é importa para a tarefa
 		- Tudo deve ser salvo no workspace da tarefa
+		- Tarefa contendo anexos e o download falhar tentei com JIRA_EMAIl e JIRA_TOKEN.
+		Se tarefa contiver anexos e o download não for possivel: INTERROMPA 
 		Se tarefa não existir no MCP: INTERROMPA 
 	0.6
 		VALIDACAO CRITICA: arquivo TASK-NAME.xml deve existir
