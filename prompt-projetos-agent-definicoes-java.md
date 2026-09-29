@@ -1,4 +1,4 @@
-# Definições para codificação da usando A.I para projetos Java.
+# Definições para codificação usando A.I. para projetos Java.
 
 ## Arch type
     - pom.xml
@@ -9,7 +9,7 @@
 
 ## Configurações
 - Banco de dados
-    - Se necessario acessar mais de um banco de dados considerar criar uma arquivo datasource para cada banco de dados, ex: 
+    - Se necessário acessar mais de um banco de dados considerar criar um arquivo datasource para cada banco de dados, ex: 
         - Se os bancos de dados 
             - Oracle
             - SQLServer
@@ -22,9 +22,9 @@
 - Model e DTO
     - Sempre declarar o **@Builder**
     - Não declarar valores default nos atributos
-    - Nunca declare construtores com parametros, usar **@AllArgsConstructor**, **@NoArgsConstructor**
+    - Nunca declare construtores com parâmetros, usar **@AllArgsConstructor**, **@NoArgsConstructor**
     **@Builder**
-    - Não deve ter codigo metodo de qualquer natureza
+    - Não deve ter código ou método de qualquer natureza
     - Devem ter apenas os atributos
     - Nunca mapear classes, Ex: usando **@Join**, **@OneToOne**, **@ManyToOne**, etc.
     - Não devem utilizar @Data, usar sempre **@Getter** e **@Setter**
@@ -40,7 +40,7 @@
     - Todo valor de um model deve ser informado na aplicação
     - Considerar que no banco de dados não existe trigger, sequences, auto incrementais e ou valores default
     - Bancos de dados e Models:
-        - Tratamento para tipos não suportados no bancos de dados oracle:
+        - Tratamento para tipos não suportados nos bancos de dados Oracle:
             - **UUID**
                 ```java
                 //PK
@@ -62,28 +62,28 @@
                 @Column(nullable = false)
                 private Boolean enabled;
                 ```
-- Respository:
+- Repository:
     - Sempre devem ser interfaces herdando de JpaRepository e anotadas com @Repository
-    - Nunca Utilizar JdbcTemplate e sempre utilizar o spring data
-    - Nunca deve ter metodos implementados
+    - Nunca utilizar JdbcTemplate e sempre utilizar o spring data
+    - Nunca deve ter métodos implementados
     - Nunca usar esquema em constantes
     - Sempre usar @Query para consultas ou execuções de procedures
         - Nunca concatenar String
-        - Sempre utilizar query completas dentro de @Query
+        - Sempre utilizar queries completas dentro de @Query
     - As respostas de funções sempre devem ser classes anotadas com @Table e @Entity
 
 - Mappers
-    - Anota com @UtilyClass
+    - Anotar com @UtilityClass
     - Nunca use construtores
-    - Agrupar dominios em Mappers por familia de Venda, Produtos, etc..
-    - Sempre devem ser classes com metodos estaticas
-    - Nunca usar estratégias com anotações para orientar a copia dos dados
+    - Agrupar domínios em Mappers por família de Venda, Produtos, etc..
+    - Sempre devem ser classes com métodos estáticos
+    - Nunca usar estratégias com anotações para orientar a cópia dos dados
     - Na criação do objeto sempre use builders
-    - Nas funções do Mapper sempre receba um Model/Entity nunca um ResultSet ou parametros
-    - Nunca usar "try cache" para tratar erros
+    - Nas funções do Mapper sempre receba um Model/Entity nunca um ResultSet ou parâmetros
+    - Nunca usar "try catch" para tratar erros
 
 - Exceptions
-    - Não criar exceções, se ainda for necessário herdar a classe de exceção de ResponseStatusExcption
+    - Não criar exceções, se ainda for necessário herdar a classe de exceção de ResponseStatusException
 
 - Service
     - Nunca manipular threads dentro dos serviços, considerar que o serviço deve ser utilizado por uma classe Controller como Consumer, Schedule e ou Api.
@@ -93,18 +93,18 @@
     - Api, Consumer, Schedule
         - Ambos podem manipular threads
     - Api
-        - Nunca tratar negocio, apenas retornar a resposta origunda 
-        - Response deve serpre ser ResponseEntity<DTO> ou ResponseEntity<Tipo-Primitivo>
+        - Nunca tratar negócio, apenas retornar a resposta oriunda 
+        - Response deve sempre ser ResponseEntity<DTO> ou ResponseEntity<Tipo-Primitivo>
         - Sempre deve retornar ResponseEntity<DTO>, nunca adaptar a resposta com WebFlux, exemplo usando Response com Mono<*>
     - Consumer
     - Schedule
 - Tests
     - Sempre usar Mockito
     - Sempre incluir @ExtendWith(MockitoExtension.class)
-    - Evitar uso de @Mock e @InjectMocks, Se ainda for necessário usar @Mock e @InjectMocks considerar uso do @BeforeEach para iniciar pelos construtores as classes sendo testadas.
-    - Para instanciar classes se possivel sempre use o Builder declarado
-    - Nunca usar "try cache" para tratar erros
+    - Evitar uso de @Mock e @InjectMocks. Se ainda for necessário usar @Mock e @InjectMocks considerar uso do @BeforeEach para iniciar pelos construtores as classes sendo testadas.
+    - Para instanciar classes se possível sempre use o Builder declarado
+    - Nunca usar "try catch" para tratar erros
     - Cobertura
-        - Model/DTO não deve ser construidos testes
+        - Model/DTO não devem ser construídos testes
         - Enum devem ter 100% de cobertura
         - Configurações, Services, Mappers, Factories e Utils devem ter 100% de cobertura

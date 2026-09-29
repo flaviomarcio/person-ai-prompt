@@ -1,11 +1,11 @@
-# Prompts para analise e criação dos scripts de bancos de dados dos projetos
+# Prompts para análise e criação dos scripts de bancos de dados dos projetos
 
 ## Documentação de projetos java e node
 
-Tem por objetivo analisar e gerar DDL dos models de um projetos.
+Tem por objetivo analisar e gerar DDL dos models de um projeto.
 
 ```text
-DEFINICOES INICIAIS
+DEFINIÇÕES INICIAIS
 ===================
 	Objetivo
 		Analisar código com foco nos models
@@ -16,9 +16,9 @@ DEFINICOES INICIAIS
 		Criação de scripts para clear, drops, schemas, sequences, triggers, tables, constraints e indexes
 		Suporte a diferentes bancos de dados com equivalentes de sintaxe
 
-FLUXO DE EXECUCAO
+FLUXO DE EXECUÇÃO
 =================
-FASE 1: ANALISE DE MODELOS
+FASE 1: ANÁLISE DE MODELOS
 	1.1 Examinar todos os models do projeto	
 	1.2
 		Identificar
@@ -92,26 +92,26 @@ FASE 10: CRIAR ARQUIVO CONSTRAINTS-CHECK.sql
 		Seq-table-idx é incremental iniciando de 1 com zeros à esquerda, ex: 01, 002
 
 FASE 11: CRIAR ARQUIVO INDEXES.sql
-	11.1 Indices relacionados a FKs	
+	11.1 Índices relacionados a FKs	
 	11.2 Não deve incluir drop aqui	
 	11.3 Se possível usar create or replace de forma concorrente no banco de dados	
 	11.4 Usar [if not exists] ou equivalente a [select object_id('object_name')]	
-	11.5 Criar indices para FK nos models	
+	11.5 Criar índices para FK nos models	
 	11.6
-		Criar indices para fields claramente utilizados em consultas
+		Criar índices para fields claramente utilizados em consultas
 		Analisar order consultada para sugestão de índice mais seletivo
 		Ex: 2 funções uma consulta por [nome] outra por [data] e nome, considerar se melhor criar 1 índice para ambos ou apenas [nome] ou [data] ou dois índices	
 	11.7
 		Considerações de seletividade
 		Se [data] for localdate é ótimo campo para índice
 		Se [data] for timestamp já tem performance prejudicada, contudo se gravado com hora 00:00:00 volta a ser bom campo
-		Se campo [date] for timestamp e filtro controller iniciar com date ou localdate considerar estratégia de ajuste do dado como cast ou converter desde banco tenha suporte
+		Se campo [date] for timestamp e filtro controller iniciar com date ou localdate considerar estratégia de ajuste do dado como cast ou converter desde que o banco tenha suporte
 		Ex: Postgres cast de timestamp para date: create index un_table_name on table_name(data::date, name)	
 	11.8
-		Nomear indices seguindo padrão
-		Indices FKs: ix_fk__${table-name}_${fields-names}_${seq-table-idx}
-		Indices Uniques: ix_un__${table-name}_${fields-names}_${seq-table-idx}
-		Indices Normals: ix_nm__${table-name}_${fields-names}_${seq-table-idx}
+		Nomear índices seguindo padrão
+		Índices FKs: ix_fk__${table-name}_${fields-names}_${seq-table-idx}
+		Índices Uniques: ix_un__${table-name}_${fields-names}_${seq-table-idx}
+		Índices Normals: ix_nm__${table-name}_${fields-names}_${seq-table-idx}
 		Seq-table-idx é incremental iniciando de 1 com zeros à esquerda, ex: 01, 002
 FASE 12: MANTER ARQUIVO INIT.DATA
 	12.1 Arquivo contém scripts personalizados	

@@ -13,8 +13,8 @@ Estrutura Universal para Montar Prompts de Alta Qualidade
     | Contexto | Por quê? | Papel, limitações (TDA), ambiente, restrições |
     | Objetivo | O quê? | Verbo claro + artefato + escopo exato |
     | Requisitos | Como? | Funcionais, não-funcionais, validações, exclusões |
-    | Formato | Aonde? | Stack, estrutura de dirs, exemplo de output |
-    | Validação | Pronto? | Checklist de aceição + critérios mensuráveis |
+    | Formato | Onde? | Stack, estrutura de dirs, exemplo de output |
+    | Validação | Pronto? | Checklist de aceitação + critérios mensuráveis |
 
 - Regras de Ouro
     1. **Sem ambiguidade** — Cada item deve ser testável
@@ -63,10 +63,10 @@ Estrutura Universal para Montar Prompts de Alta Qualidade
     `````
 
 ## Baseado em um projeto
-Este fará a leitura de um projeto seja este qual for, identificará linguagem, frameworks, caracteristicas necessárias para recriar o projeto com os mesmos padrões.
+Este fará a leitura de um projeto seja este qual for, identificará linguagem, frameworks, características necessárias para recriar o projeto com os mesmos padrões.
 - Java
     ```text
-    DEFINICOES INICIAIS
+    DEFINIÇÕES INICIAIS
     ===================
         Objetivo
             Criar prompt para gerar projeto similar ao repositório atual no diretório corrente
@@ -75,16 +75,16 @@ Este fará a leitura de um projeto seja este qual for, identificará linguagem, 
             Análise de projeto existente
             Geração de estrutura simplificada
             Criação de novo projeto com padrão semelhante
-            Identificará caracteristicas necessárias para recriar o projeto com os mesmos padrões.
+            Identificará características necessárias para recriar o projeto com os mesmos padrões.
 
-    FLUXO DE EXECUCAO
+    FLUXO DE EXECUÇÃO
     =================
-    FASE 1: ANALISE DO REPOSITORIO ATUAL
+    FASE 1: ANÁLISE DO REPOSITÓRIO ATUAL
         1.1 Examinar estrutura do projeto atual
         1.2 Identificar padrões e convenções utilizadas
         1.3 Mapear classes @Service, @Configuration, Models e DTOs
 
-    FASE 2: SIMPLIFICACAO DE REGRAS DE NEGOCIO
+    FASE 2: SIMPLIFICAÇÃO DE REGRAS DE NEGÓCIO
         2.1 Substituir regras de classes de negócio em classes anotadas com @Service
             Substituir por método simbólico de Service com método simples
             Remover lógica complexa e redundante
@@ -106,23 +106,23 @@ Este fará a leitura de um projeto seja este qual for, identificará linguagem, 
             DTO de response associados às classes @Service resultantes
             Manter padrão de entrada e saída
         2.6
-            Identificará linguagem, frameworks, bibliotecas e caracteristicas e manter as mesmas declarações utilizadas no projeto final.
-            Frameworks e bibliotecas devem ter suas versões atualizadas e compatibilizados entre si.
+            Identificar linguagem, frameworks, bibliotecas e características e manter as mesmas declarações utilizadas no projeto final.
+            Frameworks e bibliotecas devem ter suas versões atualizadas e compatibilizadas entre si.
 
-    FASE 3: ESTRUTURACAO DO NOVO PROJETO
+    FASE 3: ESTRUTURAÇÃO DO NOVO PROJETO
         3.1 Criar estrutura de diretórios similares ao projeto atual
         3.2 Aplicar padrões de nomenclatura do projeto original
         3.3 Gerar classes base simplificadas
         3.4 Criar estrutura de configuração
 
-    FASE 4: GERACAO DE ARTEFATOS
+    FASE 4: GERAÇÃO DE ARTEFATOS
         4.1 Gerar pom.xml ou requirements.txt com dependências simplificadas
         4.2 Gerar classes @Configuration necessárias
         4.3 Gerar classes @Service simplificadas
         4.4 Gerar Models e DTOs associados
         4.5 Gerar Controllers com endpoints baseados em Services
 
-    FASE 5: DOCUMENTACAO
+    FASE 5: DOCUMENTAÇÃO
         5.1 Gerar README.md com instruções de uso
         5.2 Documentar padrões simplificados utilizados
         5.3 Incluir exemplos de como estender o projeto

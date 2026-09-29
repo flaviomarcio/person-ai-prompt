@@ -1,75 +1,75 @@
 # Prompts para criação de planos de ação
 
-## Analise da tarefa vs repositorio do projeto
-Tem por objetivo analise a tarefa juntamente com o codigo fonte da aplicação e gerando assim relatorios no formato markdown como:
+## Análise da tarefa vs repositório do projeto
+Tem por objetivo analisar a tarefa juntamente com o código-fonte da aplicação, gerando assim relatórios no formato markdown como:
 - Aprendizado da A.I.
-- Analise da tarefa
-- Plano ação
+- Análise da tarefa
+- Plano de ação
 - Relatório final
 
 Prompt
 ```text
-DEFINICOES INICIAIS
+DEFINIÇÕES INICIAIS
 ===================
-	Parametros do usuário
-		Se o usuário tem limitações registradas na memoria adeque as respostas a cada limitção.
-		Limitaçõs: ex: TDA, TDAH, dislexia, etc.
+	Parâmetros do usuário
+		Se o usuário tem limitações registradas na memória adeque as respostas a cada limitação.
+		Limitações: ex: TDA, TDAH, dislexia, etc.
 	TASK-NAME
-		Representacao de uma tarefa real
+		Representação de uma tarefa real
 		Identificador: TTT-1234 
-	Diretorio do Workspace
+	Diretório do Workspace
 		Local: ${HOME}/work/spaces
-	Diretorio workspace da tarefa
-		Salvar tudo relacionado a tarefa, como xml da tarefa, anexos e resultados gerados durante a sessão como planos de ação, relatorios, etc...
+	Diretório workspace da tarefa
+		Salvar tudo relacionado à tarefa, como xml da tarefa, anexos e resultados gerados durante a sessão como planos de ação, relatórios, etc...
 		Local: ${HOME}/work/spaces/tasks/TASK-NAME 
-	Diretorio do Projeto
-		Local: Diretorio corrente (onde comando é executado)
-	Conformidade de auto referenciando:
-		- Não se auto referenciando nas documentações
+	Diretório do Projeto
+		Local: Diretório corrente (onde o comando é executado)
+	Conformidade de autorreferência:
+		- Não se autorreferenciar nas documentações
 		- Em vez de "Gerado por IA a partir de TASK-NAME.xml" usar "Gerado a partir de TASK-NAME.xml"
 
-FLUXO DE EXECUCAO
+FLUXO DE EXECUÇÃO
 =================
-FASE 0: VALIDACAO E AUTORIZACAO (INICIO)
+FASE 0: VALIDAÇÃO E AUTORIZAÇÃO (INÍCIO)
 	0.1
 		Solicite ao usuário o valor para TTT-1234
 		Se não informado: INTERROMPA
 	0.2
-		Crie se necessario o diretorio:
+		Crie se necessário o diretório:
 		- ${HOME}/work/spaces
 		- ${HOME}/work/spaces/tasks
 		- ${HOME}/work/spaces/tasks/TASK-NAME
 	0.3
-		Solicite permissao para ler e gravar arquivos:
+		Solicite permissão para ler e gravar arquivos:
 		- ${HOME}/work/spaces/tasks/
 		- ${HOME}/work/spaces/tasks/TASK-NAME
-		- Diretorio corrente
+		- Diretório corrente
 	0.4
-		Solicite permissao de leitura para usar o git
-		Locais: diretorio corrente da sessão
+		Solicite permissão de leitura para usar o git
+		Locais: diretório corrente da sessão
 	0.5 
-		Se configurados MCP para acesso boards faça:
+		Se houver MCP configurado para acesso aos boards, faça:
 		- Existe tarefa TASK-NAME?
 		- Download do xml da tarefa para TASK-NAME.xml
 		- Download dos anexos e manter nome original
-		- Download e leitura de tudo que é importa para a tarefa
+		- Download e leitura de tudo que é importante para a tarefa
 		- Tudo deve ser salvo no workspace da tarefa
-		- Tarefa contendo anexos e o download falhar tentei com JIRA_EMAIl e JIRA_TOKEN.
-		Se tarefa contiver anexos e o download não for possivel: INTERROMPA 
+		- Se a tarefa contiver anexos e o download falhar, tente com JIRA_EMAIL e JIRA_TOKEN.
+		Se tarefa contiver anexos e o download não for possível: INTERROMPA 
 		Se tarefa não existir no MCP: INTERROMPA 
 	0.6
-		VALIDACAO CRITICA: arquivo TASK-NAME.xml deve existir
-		Senao interrompa a execucao com erro
+		VALIDAÇÃO CRÍTICA: arquivo TASK-NAME.xml deve existir
+		Senão interrompa a execução com erro
 	0.7
 		Valide se TASK-NAME.xml podem estar em formatos diferentes, identificar Ferramenta, ex: Jira.
-		- Deve ser legivel como tarefa?
+		- Deve ser legível como tarefa?
 		Se qualquer falhar: INTERROMPA 
 	0.8
-		Checklist pre-requisitos:
+		Checklist pré-requisitos:
 		- TASK-NAME.xml da tarefa existe?
-		- Formato TASK-NAME.xml legivel e valido?
-		- Permissao de leitura em workspace e workspace da tarefa?
-		- Permissao de escrita em workspace e workspace da tarefa?
+		- Formato TASK-NAME.xml legível e válido?
+		- Permissão de leitura em workspace e workspace da tarefa?
+		- Permissão de escrita em workspace e workspace da tarefa?
 		Se qualquer falhar: INTERROMPA 
 FASE 1: COLETA DE ARTEFATOS
 ============================
@@ -80,141 +80,141 @@ FASE 1: COLETA DE ARTEFATOS
 		Classifique os arquivos encontrados: 
 		1.2.1 XML Principal
 			Arquivo: TASK-NAME.xml
-			Status: Obrigatorio, ja validado em 0.4
-			Acao: Extrair dados da task 
+			Status: Obrigatório, já validado em 0.4
+			Ação: Extrair dados da task 
 		1.2.2 Arquivos JSON
 			Pattern: *.json
-			Importancia: Alta
-			Conteudo: Logs, documentacao OpenAPI
-			Acao: Validar sintaxe, extrair estrutura	
+			Importância: Alta
+			Conteúdo: Logs, documentação OpenAPI
+			Ação: Validar sintaxe, extrair estrutura	
 		1.2.3 Arquivos de Imagem
-			Pattern: *.png, *.jpg, *.jpge, *.bmp
-			Conteudo: Screenshots, prints de tela
-			Acao: Aplicar OCR, extrair texto visivel	
-		1.2.4 Arquivos de Videos
-			Pattern: *.git, *.mp4, *.avi, *.mov, *.webM, *.HEIF
-			Conteudo: Videos curtos
-			Acao: Aplicar OCR, extrair texto visivel
+			Pattern: *.png, *.jpg, *.jpeg, *.bmp
+			Conteúdo: Screenshots, prints de tela
+			Ação: Aplicar OCR, extrair texto visível	
+		1.2.4 Arquivos de Vídeos
+			Pattern: *.gif, *.mp4, *.avi, *.mov, *.webM, *.HEIF
+			Conteúdo: Vídeos curtos
+			Ação: Aplicar OCR, extrair texto visível
 		1.2.5 Arquivos Markdown
 			Pattern: TASK-NAME*.md
 			Aviso: Podem ter sido gerados por IA
-			Acao: NÃO considerar como evidencia da tarefa
+			Ação: NÃO considerar como evidência da tarefa
 	1.3
 		Para cada anexo:
-		Identifique "palavras-chave" mencionadas nos arquivos e ignorando videos longs para analise.
-		Valide cruzando com codigo-fonte do repositorio
-		Busque no repositorio por essas palavras-chave
+		Identifique "palavras-chave" mencionadas nos arquivos e ignorando vídeos longos para análise.
+		Valide cruzando com código-fonte do repositório
+		Busque no repositório por essas palavras-chave
 		Exemplo: grep -r "PalavraDoLog" ./src
-		Marque como "evidencia validada" ou "sem correspondencia"
-FASE 2: ANALISE CRITICA
+		Marque como "evidência validada" ou "sem correspondência"
+FASE 2: ANÁLISE CRÍTICA
 =======================
 	2.1
 		Analise o arquivo TASK-NAME.xml para compreender:
 		- Tipo de tarefa se feat,feature,bugfix,fix, etc
 		- Escopo da tarefa
-		- Requisitos de aceitacao
-		- Criterios de sucesso
-		- Dependencias mencionadas 
+		- Requisitos de aceitação
+		- Critérios de sucesso
+		- Dependências mencionadas 
 	2.2
 		Para cada anexo de log ou print:
-		Extraia informacoes relevantes
-		Identifique classes ou metodos mencionados
-		Identifique arquivos de configuracao mencionados
-		Valide se essas referencias existem no repositorio 
+		Extraia informações relevantes
+		Identifique classes ou métodos mencionados
+		Identifique arquivos de configuração mencionados
+		Valide se essas referências existem no repositório 
 	2.3
 		Processe arquivos JSON:
 		Valide sintaxe (JSON bem formado?)
-		Se JSON invalido: log do erro, continue analise
-		Se valido: extraia estrutura e significado
-		Busque correspondencia com APIs ou logs do sistema 
+		Se JSON inválido: log do erro, continue análise
+		Se válido: extraia estrutura e significado
+		Busque correspondência com APIs ou logs do sistema 
 	2.4
 		Processe imagens e videos via OCR:
-		Extraia texto visivel da imagem
-		Se OCR falhar: solicite interpretacao manual
-		Marque manualmente o que nao foi reconhecido
-		Busque palavras-chave no repositorio 
+		Extraia texto visível da imagem
+		Se OCR falhar: solicite interpretação manual
+		Marque manualmente o que não foi reconhecido
+		Busque palavras-chave no repositório 
 	2.5
 		Documente todo aprendizado em:
 		Arquivo: TASK-NAME-aprendizado-ai.md
-		Conteudo:
+		Conteúdo:
 		- Resumo do que aprendeu
-		- Classes e metodos encontrados
-		- Configuracoes relevantes
-		- Validacoes cruzadas com repositorio
-		- Gaps ou inconsistencias encontradas
-		- Onde a evidencia foi encontrada
-FASE 3: CRIACAO DO PLANO DE ACAO
+		- Classes e métodos encontrados
+		- Configurações relevantes
+		- Validações cruzadas com repositório
+		- Gaps ou inconsistências encontradas
+		- Onde a evidência foi encontrada
+FASE 3: CRIAÇÃO DO PLANO DE AÇÃO
 ================================= 
 	3.1
-		Crie analise da tarefa com evidencias claras da clausa do problema
+		Crie análise da tarefa com evidências claras da causa do problema
 		Arquivo: TASK-NAME-analise-tarefa.md
 	3.2
-		Crie plano de acao executavel
+		Crie plano de ação executável
 		Arquivo: TASK-NAME-plano-acao.md 
 	3.3
-		Conteudo do plano deve incluir:
+		Conteúdo do plano deve incluir:
 		- Escopo completo da tarefa
 		- Classes que precisam ser modificadas
-		- Metodos que precisam ser criados ou alterados
-		- Arquivos de configuracao afetados
-		- Passos executaveis em sequencia
-		- Validacoes e testes a realizar
+		- Métodos que precisam ser criados ou alterados
+		- Arquivos de configuração afetados
+		- Passos executáveis em sequência
+		- Validações e testes a realizar
 		- Ordem recomendada de implementacao 
 	3.4
-		Estruture o plano em secoes:		
+		Estruture o plano em seções:		
 		3.4.1 Resumo Executivo baseado no arquivo TASK-NAME.xml
 			O que vai fazer
 			Por que vai fazer
 			Impacto esperado 
-		3.4.2 Analise de Impacto
-			Deixar claro por a analise levou a sugestão
+		3.4.2 Análise de Impacto
+			Deixar claro por que a análise levou a sugestão
 			Deixar claro o impacto na aplicação.
-		3.4.3 Passos de Implementacao
+		3.4.3 Passos de Implementação
 			Extrair objetivo da implementação do arquivo TASK-NAME.xml. 
-		3.4.4 Validacoes
-			Existindo validações então extrai-las do arquivo TASK-NAME.xml  
-		3.4.5 Rollback (se necessario)
+		3.4.4 Validações
+			Existindo validações então extraí-las do arquivo TASK-NAME.xml  
+		3.4.5 Rollback (se necessário)
 			Como reverter se der problema
 			Sempre confirmar o rollback 
-FASE 4: RELATORIO DE CAUSA 
+FASE 4: RELATÓRIO DE CAUSA 
 ================================ 
 	4.1
 		Crie ou atualize TASK-NAME-causa.md
 	4.2 Validação do tipo da tarefa:
-		- Se a task é bugfix, fix, hotfix, ou analise (tipo compativel?)
-		Se o tipo da tarefá não atender o requisito: Ignore está fase
+		- Se a task é bugfix, fix, hotfix, ou análise (tipo compatível?)
+		Se o tipo da tarefa não atender o requisito: ignore esta fase
 	4.3
-		Conteudo do RELATORIO deve incluir:
-		- Titulo do projeto / modificacao
+		Conteúdo do RELATÓRIO deve incluir:
+		- Título do projeto / modificação
 		- Relato principal do problema
-		- Documentar codigo com problema
+		- Documentar código com problema
 		- Como simular o problema
 		- Notas importantes 
 FASE 5: TRATAMENTO DE ERROS
 ============================ 
-	5.1 JSON Invalido
-		Acao: Log do erro, continue analise
-		Flag: Marque como "JSON invalido - verificar manualmente" 
+	5.1 JSON Inválido
+		Ação: Log do erro, continue análise
+		Flag: Marque como "JSON inválido - verificar manualmente" 
 	5.2 OCR Falhou
-		Acao: Solicite interpretacao manual do print
+		Ação: Solicite interpretação manual do print
 		Flag: Marque como "OCR falhou - verificar print" 
-	5.3 Referencia Nao Encontrada
-		Acao: Continuar analise
-		Flag: Documentar que classe/metodo nao foi localizado 
+	5.3 Referência Não Encontrada
+		Ação: Continuar análise
+		Flag: Documentar que classe/método não foi localizado 
 	5.4 TASK-NAME.xml Estrutura Inesperada
-		Acao: PARAR execucao
-		Erro: Reportar qual campo nao foi encontrado
-		Requer: Investigacao manual
-	5.5 TASK-NAME.xml Sem objetivo claro ou evidencias
-		Acao: PARAR execucao
-		Erro: Reportar qual campo nao foi encontrado
-		Requer: Investigacao manual 
+		Ação: PARAR execução
+		Erro: Reportar qual campo não foi encontrado
+		Requer: Investigação manual
+	5.5 TASK-NAME.xml Sem objetivo claro ou evidências
+		Ação: PARAR execução
+		Erro: Reportar qual campo não foi encontrado
+		Requer: Investigação manual 
 	5.6 Arquivo Corrompido
-		Acao: PARAR execucao
-		Erro: Informar qual arquivo esta corrompido
-		Recomendacao: Recuperar versao valida
+		Ação: PARAR execução
+		Erro: Informar qual arquivo está corrompido
+		Recomendação: Recuperar versão válida
 
-FASE 6: CONFIRMACAO FINAL
+FASE 6: CONFIRMAÇÃO FINAL
 ==========================
 	6.1
 		Resuma arquivos criados:
@@ -223,16 +223,16 @@ FASE 6: CONFIRMACAO FINAL
 		- TASK-NAME-plano-acao.md (gerado?)
 		- TASK-NAME-relatorio-final.md (gerado?)
 	6.2
-		Liste proximos passos para implementacao
+		Liste próximos passos para implementacao
 	6.3
-		Indique se houve alguma interrupcao ou erro 
+		Indique se houve alguma interrupção ou erro 
 RESUMO DO FLUXO
 ===============
-	Fase 0: Validacoes e Permissoes
+	Fase 0: Validações e Permissões
 	Fase 1: Coleta de Artefatos
-	Fase 2: Analise Critica
-	Fase 3: Criacao do Plano
-	Fase 4: Geracao de Documentacao
+	Fase 2: Análise Crítica
+	Fase 3: Criação do Plano
+	Fase 4: Geração de Documentação
 	Fase 5: Tratamento de Erros (durante todo processo)
-	Fase 6: Confirmacao e Proximos Passos
+	Fase 6: Confirmação e Próximos Passos
 ```

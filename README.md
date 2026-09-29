@@ -1,9 +1,10 @@
 # A.I. Como, quando e onde usar
 
-## Prompts
 
-- Agentes
+## Agentes
     - [Definições para projeto java](prompt-projetos-agent-definicoes-java.md)
+
+## Prompts
 
 - Criando
     - [Documentação](prompt-criar.md)
@@ -16,6 +17,7 @@
     - [Refatorações](prompt-projetos-refatorar.md)
     - [Cobertura de testes](prompt-projetos-testes.md)
     - [Documentação](prompt-projetos-documentar.md)
+    - [Importação de contexto](prompt-projetos-context-import.md)
 
 ## Configurando Memory, MCP, etc...
   - [Documentação](configuracoes.md)

@@ -1,13 +1,13 @@
-# Prompts para analise e documentação dos projetos
+# Prompts para análise e documentação dos projetos
 
 ## Documentação de projetos java e node
 
-Tem por objetivo documentar classes e metodos das aplicações, bem como aquivos de configuração gerando assim um *README.md* para o projeto trabalhado
+Tem por objetivo documentar classes e métodos das aplicações, bem como arquivos de configuração gerando assim um *README.md* para o projeto trabalhado
 
->Nota: antes de executar a documentação execute a geração do ddl com o [Prompt](projetos-database.md).
+>Nota: antes de executar a documentação execute a geração do DDL com o [Prompt](projetos-database.md).
 
 ```text
-DEFINICOES INICIAIS
+DEFINIÇÕES INICIAIS
 ===================
 	Objetivo
 		Analisar código-fonte, documentar projeto e gerar README.md completo
@@ -19,9 +19,9 @@ DEFINICOES INICIAIS
 		Geração/atualização de README.md
 		Análise de configurações e estrutura de banco de dados
 
-FLUXO DE EXECUCAO
+FLUXO DE EXECUÇÃO
 =================
-FASE 1: ANALISE DE CODIGO
+FASE 1: ANÁLISE DE CÓDIGO
 	1.1 Examinar todos os arquivos de código-fonte do projeto
 	1.2 Identificar
 		Controllers
@@ -33,7 +33,7 @@ FASE 1: ANALISE DE CODIGO
 		Adapters
 		Enums	
 	1.3 Mapear estrutura de pacotes e dependências
-FASE 2: DOCUMENTACAO DE CODIGO-FONTE
+FASE 2: DOCUMENTAÇÃO DE CODIGO-FONTE
 	2.1
 		Adicionar comentários em todas as classes
 		Descrever responsabilidade da classe
@@ -71,7 +71,7 @@ FASE 2: DOCUMENTACAO DE CODIGO-FONTE
 		Para @Email: Email inválido
 		Para @Valid: Validação de objeto aninhado falhou
 		Usar mensagens customizadas em cada constraint
-FASE 3: GERACAO DE README.md
+FASE 3: GERAÇÃO DE README.md
 	3.1 Criar ou sobrescrever README.md	
 	3.2 Seção Visão Geral do Projeto
 		Descrição breve do projeto
@@ -93,7 +93,7 @@ FASE 3: GERACAO DE README.md
 			- Recomendação de implementação
 			- Estimativa de esforço (se possível)
 			- Prioridade (Alta/Média/Baixa)
-FASE 4: CONFIGURACOES DO PROJETO
+FASE 4: CONFIGURAÇÕES DO PROJETO
 	4.1 Verificar existência de arquivos de configuração
 		- application.yml / application.properties
 		- nginx.conf
@@ -210,7 +210,7 @@ FASE 5: ESTRUTURA DE BANCO DE DADOS
 				Será removido todo conteúdo do banco
 				Use apenas em desenvolvimento ou SIT
 				Considere backup antes de executar
-FASE 6: SCRIPTS E AUTOMACAO
+FASE 6: SCRIPTS E AUTOMAÇÃO
 	6.1 Verificar existência de pasta script/ ou scripts/	
 	6.2 Se existirem scripts shell/bash		
 		Para cada script
@@ -222,7 +222,7 @@ FASE 6: SCRIPTS E AUTOMACAO
 			- Exemplo de uso
 			- Ambientes (DEV/SIT/PROD)
 			- Pré-requisitos
-FASE 7: CONTAINERIZACAO
+FASE 7: CONTAINERIZAÇÃO
 	7.1 Verificar existência de Dockerfile	
 	7.2 Se existir Dockerfile
 			Seção Docker - Build
@@ -248,7 +248,7 @@ FASE 7: CONTAINERIZACAO
 				Como reconstruir: docker-compose up --build
 				Exemplo de ambiente local
 				Como acessar cada serviço
-FASE 8: QUALIDADE DE CODIGO
+FASE 8: QUALIDADE DE CÓDIGO
 	8.1 Seção Padrões de Código		
 			Requisito: Cobertura de Testes Services
 				Descrição: 100% de cobertura obrigatória
@@ -303,7 +303,7 @@ FASE 8: QUALIDADE DE CODIGO
 				Exemplo: Repositório com query methods
 				Exemplo: Repositório com @Query (evitar)
 				Vantagens de usar query methods: type-safe, refactoring automático, performance
-FASE 9: GLOSSARIO DE SIGLAS
+FASE 9: GLOSSÁRIO DE SIGLAS
 	9.1 Identificar todas as siglas utilizadas no projeto	
 	9.2 Para cada sigla incluir
 		Sigla

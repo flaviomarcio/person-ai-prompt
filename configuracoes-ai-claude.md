@@ -51,7 +51,7 @@
             claude --resume
             ```
    - Teste no Claude, escolha um card com comentários e anexos
-      1. Use o **prompt** substituindo o numero da task:
+      1. Use o **prompt** substituindo o número da task:
          ```
          1. Teste o acesso ao jira.
          2. Teste leitura do card ABC-1234 

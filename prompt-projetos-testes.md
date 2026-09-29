@@ -7,7 +7,7 @@ Tem por objetivo criar testes para classes e casos de uso das aplicações
 
 - Para o projeto
     ```text
-    DEFINICOES INICIAIS
+    DEFINIÇÕES INICIAIS
     ===================
         Objetivo
             Criar testes para todo o projeto
@@ -16,21 +16,21 @@ Tem por objetivo criar testes para classes e casos de uso das aplicações
             Testes unitários com Mockito
             Cobertura de services, utils, adapters, controllers, consumers
             Validação de resultados e uso de repositories
-    FLUXO DE EXECUCAO
+    FLUXO DE EXECUÇÃO
     =================
-    FASE 1: ANALISE DO PROJETO
+    FASE 1: ANÁLISE DO PROJETO
         1.1 Analisar e usar padrão de testes existentes
         1.2 Identificar padrões utilizados
         1.3 Mapear estrutura de testes atual
 
-    FASE 2: CONFIGURACAO BASICA DOS TESTES
+    FASE 2: CONFIGURAÇÃO BÁSICA DOS TESTES
         2.1 Não utilizar contexto do SpringBootTest
         2.2 Usar Mockito para mocks e validações
         2.3
             Sempre utilizar nome das classes para acessar métodos envolvidos
             Ao usar any() sempre usar Mockito.any()
             Ao usar assertNotNull() sempre usar Assertions.assertNotNull()
-    FASE 3: PADRONIZACAO DOS TESTES
+    FASE 3: PADRONIZAÇÃO DOS TESTES
         3.1 Sem indicar @DisplayName o que vai ser testado        
         3.2 Sempre validar resultado se houver resultado        
         3.3 Sempre validar uso de classes como repositories        
@@ -52,7 +52,7 @@ Tem por objetivo criar testes para classes e casos de uso das aplicações
             Ex: não emular chamadas a API ou tópicos
         6.2 Validar que métodos são chamados corretamente        
         6.3 Mockar dependências externas
-    FASE 7: VALIDACOES FINAIS
+    FASE 7: VALIDAÇÕES FINAIS
         7.1 Não tentar entender libs externas
         7.2 Focar em testar código próprio do projeto        
         7.3 Usar Mockito.verify para validar chamadas        
@@ -61,7 +61,7 @@ Tem por objetivo criar testes para classes e casos de uso das aplicações
 
 - Para algumas classes
     ```text
-    DEFINICOES INICIAIS
+    DEFINIÇÕES INICIAIS
     ===================
         Objetivo
             Criar testes para classes específicas
@@ -72,21 +72,21 @@ Tem por objetivo criar testes para classes e casos de uso das aplicações
         Escopo
             Testes unitários com Mockito
             Validação de resultados e uso de repositories
-    FLUXO DE EXECUCAO
+    FLUXO DE EXECUÇÃO
     =================
-    FASE 1: ANALISE DO PROJETO
+    FASE 1: ANÁLISE DO PROJETO
         1.1 Analisar padrão de testes existentes        
         1.2 Identificar repositories e dependências de ClasseNomeA        
         1.3 Identificar repositories e dependências de ClasseNomeB        
         1.4 Mapear estrutura de testes atual
-    FASE 2: CONFIGURACAO BASICA DOS TESTES
+    FASE 2: CONFIGURAÇÃO BÁSICA DOS TESTES
         2.1 Não utilizar contexto do SpringBootTest        
         2.2 Usar Mockito para mocks e validações        
         2.3
             Sempre utilizar nome das classes para acessar métodos envolvidos
             Ao usar any() sempre usar Mockito.any()
             Ao usar assertNotNull() sempre usar Assertions.assertNotNull()
-    FASE 3: PADRONIZACAO DOS TESTES
+    FASE 3: PADRONIZAÇÃO DOS TESTES
         3.1 Sem indicar @DisplayName o que vai ser testado        
         3.2 Sempre validar resultado se houver resultado        
         3.3 Sempre validar uso de classes como repositories        
@@ -113,7 +113,7 @@ Tem por objetivo criar testes para classes e casos de uso das aplicações
             Ex: não emular chamadas a API ou tópicos
         6.2 Validar que métodos são chamados corretamente
         6.3 Mockar dependências externas
-    FASE 7: VALIDACOES FINAIS
+    FASE 7: VALIDAÇÕES FINAIS
         7.1 Não tentar entender libs externas
         7.2 Focar em testar código próprio das classes        
         7.3 Usar Mockito.verify para validar chamadas
