@@ -20,7 +20,7 @@ DEFINIÇÕES INICIAIS
 		Diretório onde o contexto desejado deve existir (Contexto que será reaproveitado)
         Local: ${HOME}/work/spaces/BRANCH-CONTEXT
 	Diretório do Projeto
-		Local: ${PWD} (onde o contexto será reaplicado)
+		Local: $(pwd) (onde o contexto será reaplicado)
 
 FLUXO DE EXECUÇÃO
 =================
@@ -32,7 +32,7 @@ FASE 0: Identificação do diretório destino
 		Solicite permissão para ler e gravar arquivos:
 		Local: 
 			- ${HOME}/work/spaces/BRANCH-CONTEXT
-			- ${PWD}
+			- $(pwd)
 
 FASE 2: COLETA DE ARTEFATOS
 ============================
@@ -42,7 +42,7 @@ FASE 2: COLETA DE ARTEFATOS
 		Se não existir: INTERROMPA
 	2.2
 		Importar contexto gerado no diretório 
-		Local: ${DIR} (onde o contexto será reaplicado)
+		Local: $(pwd) (onde o contexto será reaplicado)
 		Se não existir contexto: INTERROMPA
 
 RESUMO DO FLUXO
