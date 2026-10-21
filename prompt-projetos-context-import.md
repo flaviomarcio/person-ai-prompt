@@ -13,7 +13,7 @@ DEFINIÇÕES INICIAIS
 		Limitações: ex: TDA, TDAH, dislexia, etc.
     BRANCH-CONTEXT
 		Representação do nome da branch do contexto a ser reaproveitado
-		Identificador: build/descritivo
+		Identificador: feature/*|build/*|hotfix
 	Diretório do Workspace onde as branches existem
 		Local: ${HOME}/work/spaces
 	Diretório do contexto
